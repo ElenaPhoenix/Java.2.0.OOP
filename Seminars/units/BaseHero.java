@@ -20,6 +20,16 @@ public abstract class BaseHero { //это абстрактный класс, н�
         return name+" "+className+" здоровье: "+hp+" броня: "+armor+" ";
     }
 
+/**
+ * Конструктор базового персонажа. Конструктор должен быть public и ничего не возвращать
+ * @param hp здоровье
+ * @param name имя
+ * @param className название класса
+ * @param x координата на местности х
+ * @param y координата на местности y
+ * @param armor броня
+ * @param damage урон
+ */
     public BaseHero(float hp, String name, String className, int x, int y, int armor, int[] damage) {
         this.hp = hp;
         this.name = name;

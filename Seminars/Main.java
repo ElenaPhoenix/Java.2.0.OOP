@@ -10,7 +10,7 @@ import units.Peasant;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) { // public - модификатор видимости, static - java запишет в память класс и у даст ему адрес, по адресу метод можно вызвать
 
         ArrayList<BaseHero> hero = new ArrayList<>();
         hero.add(new Arbalester("Беркут"));
@@ -22,7 +22,7 @@ public class Main {
         hero.add(new Priest("Темный Лорд"));
         hero.add(new Thief("Лис"));
         hero.add(new Peasant("Раб"));
-        
+
         hero.forEach(n -> System.out.println(n));
 
     }
