@@ -1,11 +1,12 @@
+//  Создать абстрактный класс персонажей
 package org.example.units;
 
-public abstract class BaseHero {
+public abstract class BaseHero { //это абстрактный класс, не может содержать объекты этого класса, противоположность final
     float hp,maxHp;
     String name;
-    int x, y;
-    int atk;
-    int def;
+    int x, y; // координаты на карте
+    int atk; // атака
+    int def; // защита
     int[] damage;
 
     public BaseHero(float hp, String name, int x, int y, int atk, int def, int[] damage) {
@@ -19,9 +20,9 @@ public abstract class BaseHero {
         this.damage = damage;
     }
 
-    protected int getInt(){
-        return 1;
-    }
+    // protected int getInt(){
+    //     return 1;
+    // }
 
 
 }
