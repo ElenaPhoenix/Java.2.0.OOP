@@ -1,5 +1,7 @@
 package units;
 
+import java.util.ArrayList;
+
 public class Peasant extends BaseHero {
     // int giveArrows;
     // int chance;
@@ -13,7 +15,9 @@ public class Peasant extends BaseHero {
     public String getInfo() {
         return "крестьянин";
     }
+
     @Override
-    public void step() {
+    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
+
     }
 }

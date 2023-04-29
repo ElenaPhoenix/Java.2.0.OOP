@@ -1,5 +1,7 @@
 package units;
 
+import java.util.ArrayList;
+
 public class Spearman extends BaseHero {
 
     public Spearman(String name) {
@@ -9,7 +11,9 @@ public class Spearman extends BaseHero {
     public String getInfo() {
         return "копейщик";
     }
+
     @Override
-    public void step() {
+    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
+
     }
 }

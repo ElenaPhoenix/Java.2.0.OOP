@@ -1,5 +1,7 @@
 package units;
 
+import java.util.ArrayList;
+
 public class Thief extends BaseHero {
     // int trick; // хитрость
     // int chance;
@@ -13,7 +15,9 @@ public class Thief extends BaseHero {
     public String getInfo() {
         return "разбойник";
     }
+
     @Override
-    public void step() {
+    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
+
     }
 }

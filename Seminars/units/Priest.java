@@ -1,5 +1,7 @@
 package units;
 
+import java.util.ArrayList;
+
 public class Priest extends BaseHero{
     // protected int mana;
     // protected ArrayList<SpellBook> spellsBook;
@@ -13,7 +15,9 @@ public class Priest extends BaseHero{
     public String getInfo() {
         return "монах";
     }
+
     @Override
-    public void step() {
+    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
+
     }
 }
