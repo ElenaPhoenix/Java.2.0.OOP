@@ -1,6 +1,6 @@
-package Lesson_08.Ex005.v2.Warriors;
+package Lection2.Ex005.v2.Warriors;
 
-import Lesson_08.Ex005.v2.Hero;
+import Lection2.Ex005.v2.Hero;
 
 public class Knight extends Hero implements Warrior  {
 

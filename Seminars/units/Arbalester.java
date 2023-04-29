@@ -1,7 +1,5 @@
 package units;
 
-import weapons.Weapons;
-
 public class Arbalester extends Shooter {
     // int arrows; // количество болтов
     // int accuracy; // меткость

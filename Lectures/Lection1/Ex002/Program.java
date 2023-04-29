@@ -1,4 +1,4 @@
-package Lesson_07.Ex002;
+package Lection1.Ex002;
 
 public class Program {
     static double distance(int x1, int y1, int x2, int y2) {

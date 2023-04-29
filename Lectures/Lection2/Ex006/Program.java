@@ -1,7 +1,7 @@
-package Lesson_08.Ex006;
+package Lection2.Ex006;
 
-import Lesson_08.Ex006.Applications.Notepad;
-import Lesson_08.Ex006.Format.*;
+import Lection2.Ex006.Applications.Notepad;
+import Lection2.Ex006.Format.*;
 
 public class Program {
     public static void main(String[] args) {

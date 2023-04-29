@@ -1,4 +1,4 @@
-package Lesson_08.Ex004;
+package Lection2.Ex004;
 
 public class Dwarf extends Druid {
     
@@ -11,5 +11,5 @@ public class Dwarf extends Druid {
         this("", 0);
         System.out.println("Вызван Dwarf()");
     }
-   
+
 }

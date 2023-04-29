@@ -1,6 +1,6 @@
-package Lesson_08.Ex003.alliance;
+package Lection2.Ex003.alliance;
 
-import Lesson_08.Ex003.*;
+import Lection2.Ex003.*;
 
 public class Dwarf extends Druid {
     public Dwarf() {

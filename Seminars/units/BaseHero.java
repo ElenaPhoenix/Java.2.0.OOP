@@ -3,8 +3,6 @@ package units;
 
 import java.util.Random;
 
-import weapons.Weapons;
-
 public abstract class BaseHero implements GameInterface { //это абстрактный класс, не может содержать объекты этого класса, противоположность final
     public String name;
     protected String className;

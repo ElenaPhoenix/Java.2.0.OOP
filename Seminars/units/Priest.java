@@ -1,7 +1,5 @@
 package units;
 
-import java.util.ArrayList;
-
 public class Priest extends BaseHero{
     // protected int mana;
     // protected ArrayList<SpellBook> spellsBook;
