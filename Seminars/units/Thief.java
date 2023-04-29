@@ -13,4 +13,7 @@ public class Thief extends BaseHero {
     public String getInfo() {
         return "разбойник";
     }
+    @Override
+    public void step() {
+    }
 }

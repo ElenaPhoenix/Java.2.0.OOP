@@ -13,4 +13,7 @@ public class Peasant extends BaseHero {
     public String getInfo() {
         return "крестьянин";
     }
+    @Override
+    public void step() {
+    }
 }

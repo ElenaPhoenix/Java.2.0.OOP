@@ -13,4 +13,7 @@ public class Magician extends BaseHero{
     public String getInfo() {
         return "маг";
     }
+    @Override
+    public void step() {
+    }
 }

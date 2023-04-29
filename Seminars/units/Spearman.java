@@ -9,4 +9,7 @@ public class Spearman extends BaseHero {
     public String getInfo() {
         return "копейщик";
     }
+    @Override
+    public void step() {
+    }
 }

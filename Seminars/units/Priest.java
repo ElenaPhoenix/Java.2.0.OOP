@@ -13,4 +13,7 @@ public class Priest extends BaseHero{
     public String getInfo() {
         return "монах";
     }
+    @Override
+    public void step() {
+    }
 }

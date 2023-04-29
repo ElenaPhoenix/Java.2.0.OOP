@@ -10,4 +10,7 @@ public class Sniper extends Shooter {
     public String getInfo() {
         return "лучник";
     }
+    @Override
+    public void step() {
+    }
 }
