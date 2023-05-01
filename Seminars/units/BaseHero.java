@@ -7,7 +7,7 @@ public abstract class BaseHero implements GameInterface { // это абстра
                                                           // класса, противоположность final
     protected static int count;
     protected String name;
-    protected static Position position; // координаты на карте
+    protected Position position; // координаты на карте
     protected float hp, maxHp;
 
     protected int attack;
@@ -38,17 +38,17 @@ public abstract class BaseHero implements GameInterface { // это абстра
         return hp;
     }
 
-    // public void setHp(Float hp) {
-    //     this.hp = hp;
-    // }
+    public void setHp(Float hp) {
+        this.hp = hp;
+    }
 
     public Float getMaxHp() {
         return maxHp;
     }
 
-    // public void setMaxHp(Float maxHp) {
-    //     this.maxHp = maxHp;
-    // }
+    public void setMaxHp(Float maxHp) {
+        this.maxHp = maxHp;
+    }
 
     public String getName() {
         return name;
@@ -58,24 +58,24 @@ public abstract class BaseHero implements GameInterface { // это абстра
         this.name = name;
     }
 
-    // public int getAttack() {
-    //     return attack;
-    // }
+    public int getAttack() {
+        return attack;
+    }
 
-    // public void setAttack(int attack) {
-    //     this.attack = attack;
-    // }
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
 
-    // public int getArmor() {
-    //     return armor;
-    // }
+    public int getArmor() {
+        return armor;
+    }
 
-    // public void setArmor(int armor) {
-    //     this.armor = armor;
-    // }
+    public void setArmor(int armor) {
+        this.armor = armor;
+    }
 
 
-    public BaseHero(float hp, String name, Position position, int attack, int[] damage, int def, int priority) {
+    public BaseHero(float hp, String name, Position position, int attack, int[] damage, int armor, int priority) {
         this.hp = hp;
         this.maxHp = hp;
         this.name = name;
@@ -88,32 +88,29 @@ public abstract class BaseHero implements GameInterface { // это абстра
         this.state = State.stand;
     }
 
-    public BaseHero(int i, int j, int k, int l, int[] ms) {
-    }
-
     @Override
-    public abstract void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy);
+    public abstract void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> teamPerson);
     @Override
     public String getInfo() {
-        return this.getClass().getSimpleName() + " " + hp;
+        return this.getClass().getSimpleName();
     }
     /*находит и возвращает ближайшего врага, принимает список*
-    @param arrayEnemy
+    @param teamPerson
     * @return
     */
-    public BaseHero findNearEnemy(ArrayList<BaseHero> arrayEnemy) {                                                  //Метод поиска ближайшего врага
-    BaseHero nearEnemy = arrayEnemy.get(0);
-    double distance = position.distance(arrayEnemy.get(0).position);
+    public BaseHero findNearPerson(ArrayList<BaseHero> teamPerson) {                                                  //Метод поиска ближайшего врага
+    BaseHero nearPerson = teamPerson.get(0);
+    double distance = position.distance(teamPerson.get(0).position);
     double minDistance = distance;
-    for (int i = 1; i < arrayEnemy.size(); i++) {
-    if (arrayEnemy.get(i).hp <= 0) continue; // если неживой
-    distance = position.distance(arrayEnemy.get(i).position);
+    for (int i = 1; i < teamPerson.size(); i++) {
+    if (teamPerson.get(i).hp <= 0) continue; // если неживой
+    distance = position.distance(teamPerson.get(i).position);
     if (minDistance > distance) {
     minDistance = distance;
-    nearEnemy = arrayEnemy.get(i);
+    nearPerson = teamPerson.get(i);
     }
     }
-    return nearEnemy;
+    return nearPerson;
     }
 
     protected void getDamage(float damage) {                                                                        // Метод нанесения урона
@@ -132,4 +129,14 @@ public abstract class BaseHero implements GameInterface { // это абстра
     public int[] getCoord() {
         return new int[]{position.getX(),position.getY()};
     }
+
+// @Override
+//     public String toString() {
+//         return name +
+//                 " Hp: " + Math.round(hp) +
+//                 " Arm: " + armor +
+//                 " Att: " + attack +
+//                 " Dmg: " + Math.round(Math.abs((damage[0] + damage[1])/2)) +
+//                 " " + state;
+//     }
 }

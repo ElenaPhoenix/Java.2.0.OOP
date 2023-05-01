@@ -1,22 +1,8 @@
 package units;
 
-import java.util.ArrayList;
+public class Magician extends Mags{
 
-public class Magician extends BaseHero{
-    // protected int mana;
-    // protected ArrayList<SpellBook> spellsBook;
-
-    public Magician(String name) {
-        super (100, 2, 6, 5, new int[] {7, 10});
-        // mana=100;
-        // spellsBook.add(new Spells("Hill"));
-    }
-    @Override
-    public String getInfo() {
-        return "маг";
-    }
-
-    @Override
-    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
+    public Magician(String name, Position position) {
+        super (100, name, position, 0, new int[] {1, 2}, 45, 11, 6);
     }
 }

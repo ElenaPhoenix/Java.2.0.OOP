@@ -3,21 +3,27 @@ package units;
 import java.util.ArrayList;
 
 public class Peasant extends BaseHero {
-    // int giveArrows;
-    // int chance;
 
-    public Peasant(String name) {
-        super(80, 4, 6, 0, new int[]{0, 0});
-        // giveArrows=1;
-        // chance=90;
-    }
-    @Override
-    public String getInfo() {
-        return "крестьянин";
+    public Peasant(String name, Position position) {
+        super(50, name, position, 0, new int[]{0, 0}, 20, 2);
     }
 
     @Override
     public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
-
-    }
+        //System.out.println("Ходит " + getInfo() + " " + getName());
+        if (state == State.dead) return;
+        state = State.stand;
 }
+@Override
+    public String getInfo() {
+        return this.getClass().getSimpleName();
+    }
+@Override
+    public String toString() {
+        return name +
+                " Hp:" + Math.round(hp) +
+                " Arm:" + armor +
+                " Att:" + attack +
+                " Dmg: 0 " +
+                " " + state;
+    }}

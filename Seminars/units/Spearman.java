@@ -2,18 +2,17 @@ package units;
 
 import java.util.ArrayList;
 
-public class Spearman extends BaseHero {
-
-    public Spearman(String name) {
-        super(150, 3, 6, 20, new int[]{15, 20});
+public class Spearman extends Soldiers {
+    private int spear;
+    public int getSpear() {
+        return spear;
     }
-    @Override
-    public String getInfo() {
-        return "копейщик";
+    public void setSpear(int spear) {
+        this.spear = spear;
     }
 
-    @Override
-    public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
-
-    }
+    public Spearman(String name, Position position) {
+        super(150, name, position, 20, new int[]{15, 20}, 85, 8);
+    // spear = 10;
+}
 }
