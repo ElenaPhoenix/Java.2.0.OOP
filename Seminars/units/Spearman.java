@@ -1,7 +1,5 @@
 package units;
 
-import java.util.ArrayList;
-
 public class Spearman extends Soldiers {
     private int spear;
     public int getSpear() {
