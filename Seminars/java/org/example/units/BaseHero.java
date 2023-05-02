@@ -1,11 +1,14 @@
 //  Создать абстрактный класс персонажей
-package units;
+package java.org.example.units;
 
 import java.util.ArrayList;
 
+import java.org.example.GameInterface;
+import java.org.example.Position;
+
 public abstract class BaseHero implements GameInterface { // это абстрактный класс, не может содержать объекты этого
                                                           // класса, противоположность final
-    protected static int count;
+    // protected static int count;
     protected String name;
     protected Position position; // координаты на карте
     protected float hp, maxHp;
@@ -38,17 +41,17 @@ public abstract class BaseHero implements GameInterface { // это абстра
         return hp;
     }
 
-    public void setHp(Float hp) {
-        this.hp = hp;
-    }
+    // public void setHp(Float hp) {
+    //     this.hp = hp;
+    // }
 
     public Float getMaxHp() {
         return maxHp;
     }
 
-    public void setMaxHp(Float maxHp) {
-        this.maxHp = maxHp;
-    }
+    // public void setMaxHp(Float maxHp) {
+    //     this.maxHp = maxHp;
+    // }
 
     public String getName() {
         return name;
@@ -58,21 +61,21 @@ public abstract class BaseHero implements GameInterface { // это абстра
         this.name = name;
     }
 
-    public int getAttack() {
-        return attack;
-    }
+    // public int getAttack() {
+    //     return attack;
+    // }
 
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
+    // public void setAttack(int attack) {
+    //     this.attack = attack;
+    // }
 
-    public int getArmor() {
-        return armor;
-    }
+    // public int getArmor() {
+    //     return armor;
+    // }
 
-    public void setArmor(int armor) {
-        this.armor = armor;
-    }
+    // public void setArmor(int armor) {
+    //     this.armor = armor;
+    // }
 
 
     public BaseHero(float hp, String name, Position position, int attack, int[] damage, int armor, int priority) {
@@ -83,7 +86,6 @@ public abstract class BaseHero implements GameInterface { // это абстра
         this.attack = attack;
         this.damage = damage;
         this.armor = armor;
-        this.damage = damage;
         this.priority = priority;
         this.state = State.stand;
     }
@@ -126,17 +128,17 @@ public abstract class BaseHero implements GameInterface { // это абстра
             hp = maxHp;
         }
     }
-    public int[] getCoord() {
+    public int[] getCoords() {
         return new int[]{position.getX(),position.getY()};
     }
 
-// @Override
-//     public String toString() {
-//         return name +
-//                 " Hp: " + Math.round(hp) +
-//                 " Arm: " + armor +
-//                 " Att: " + attack +
-//                 " Dmg: " + Math.round(Math.abs((damage[0] + damage[1])/2)) +
-//                 " " + state;
-//     }
+@Override
+    public String toString() {
+        return name +
+                " Hp: " + Math.round(hp) +
+                " Arm: " + armor +
+                " Att: " + attack +
+                " Dmg: " + Math.round(Math.abs((damage[0] + damage[1])/2)) +
+                " " + state;
+    }
 }

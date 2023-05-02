@@ -1,4 +1,6 @@
-package units;
+package java.org.example.units;
+
+import java.org.example.Position;
 
 public class Priest extends Mags{
 

@@ -1,7 +1,9 @@
-package units;
+package java.org.example.units;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import java.org.example.Position;
 
 public class Soldiers extends BaseHero {
     public Soldiers(float hp, String name, Position position, int attack, int[] damage, int armor, int priority) {

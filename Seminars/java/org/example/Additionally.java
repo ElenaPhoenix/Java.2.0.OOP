@@ -1,7 +1,10 @@
-package units;
+package java.org.example;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import java.org.example.units.*;
+
 
 public class Additionally {
     public static ArrayList<BaseHero> getList(ArrayList<BaseHero> arrayList, int y1) {

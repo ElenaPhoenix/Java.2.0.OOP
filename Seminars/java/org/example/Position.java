@@ -1,4 +1,4 @@
-package units;
+package java.org.example;
 
 public class Position{
     private int x,y;

@@ -1,7 +1,9 @@
-package units;
+package java.org.example.units;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import java.org.example.Position;
 
 public abstract class Shooters extends BaseHero {
     protected int arrows = 10, maxArrows; // количество стрел

@@ -1,6 +1,8 @@
-package units;
+package java.org.example.units;
 
 import java.util.ArrayList;
+
+import java.org.example.Position;
 
 public class Peasant extends BaseHero {
 
