@@ -135,10 +135,10 @@ public abstract class BaseHero implements GameInterface { // это абстра
 @Override
     public String toString() {
         return name +
-                " Hp: " + Math.round(hp) +
-                " Arm: " + armor +
-                " Att: " + attack +
-                " Dmg: " + Math.round(Math.abs((damage[0] + damage[1])/2)) +
-                " " + state;
+                " U+2665: " + Math.round(hp) +
+                " U+1F6E1: " + armor +
+                " U+1F5E1: " + attack +
+                " U+2694: " + Math.round(Math.abs((damage[0] + damage[1])/2)) +
+                " U+1F6B6: " + state;
     }
 }

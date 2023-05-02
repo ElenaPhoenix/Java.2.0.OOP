@@ -13,13 +13,10 @@ public class Mags extends BaseHero {
         }
         public void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy) {
             BaseHero nearOwn = findNearPerson(arrayFriend);
-            if (nearOwn.getHp() > 0 & nearOwn.getHp() < nearOwn.getMaxHp()) {
-                Random r = new Random();
-                nearOwn.takeHealth(r.nextInt(damage[0], damage[1] + 1));
-                manna -= 1;
+
             }
     
-        }
+        
         @Override
         public String getInfo() {
             return this.getClass().getSimpleName();
