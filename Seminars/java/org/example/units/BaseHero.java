@@ -42,7 +42,7 @@ public abstract class BaseHero implements GameInterface { // это абстра
     }
 
     // public void setHp(Float hp) {
-    //     this.hp = hp;
+    // this.hp = hp;
     // }
 
     public Float getMaxHp() {
@@ -50,7 +50,7 @@ public abstract class BaseHero implements GameInterface { // это абстра
     }
 
     // public void setMaxHp(Float maxHp) {
-    //     this.maxHp = maxHp;
+    // this.maxHp = maxHp;
     // }
 
     public String getName() {
@@ -62,21 +62,20 @@ public abstract class BaseHero implements GameInterface { // это абстра
     }
 
     // public int getAttack() {
-    //     return attack;
+    // return attack;
     // }
 
     // public void setAttack(int attack) {
-    //     this.attack = attack;
+    // this.attack = attack;
     // }
 
     // public int getArmor() {
-    //     return armor;
+    // return armor;
     // }
 
     // public void setArmor(int armor) {
-    //     this.armor = armor;
+    // this.armor = armor;
     // }
-
 
     public BaseHero(float hp, String name, Position position, int attack, int[] damage, int armor, int priority) {
         this.hp = hp;
@@ -92,30 +91,36 @@ public abstract class BaseHero implements GameInterface { // это абстра
 
     @Override
     public abstract void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> teamPerson);
+
     @Override
     public String getInfo() {
         return this.getClass().getSimpleName();
     }
-    /*находит и возвращает ближайшего врага, принимает список*
-    @param teamPerson
-    * @return
-    */
-    public BaseHero findNearPerson(ArrayList<BaseHero> teamPerson) {                                                  //Метод поиска ближайшего врага
-    BaseHero nearPerson = teamPerson.get(0);
-    double distance = position.distance(teamPerson.get(0).position);
-    double minDistance = distance;
-    for (int i = 1; i < teamPerson.size(); i++) {
-    if (teamPerson.get(i).hp <= 0) continue; // если неживой
-    distance = position.distance(teamPerson.get(i).position);
-    if (minDistance > distance) {
-    minDistance = distance;
-    nearPerson = teamPerson.get(i);
-    }
-    }
-    return nearPerson;
+
+    /*
+     * находит и возвращает ближайшего врага, принимает список*
+     * 
+     * @param teamPerson
+     * 
+     * @return
+     */
+    public BaseHero findNearPerson(ArrayList<BaseHero> teamPerson) { // Метод поиска ближайшего врага
+        BaseHero nearPerson = teamPerson.get(0);
+        double distance = position.distance(teamPerson.get(0).position);
+        double minDistance = distance;
+        for (int i = 1; i < teamPerson.size(); i++) {
+            if (teamPerson.get(i).hp <= 0)
+                continue; // если неживой
+            distance = position.distance(teamPerson.get(i).position);
+            if (minDistance > distance) {
+                minDistance = distance;
+                nearPerson = teamPerson.get(i);
+            }
+        }
+        return nearPerson;
     }
 
-    protected void getDamage(float damage) {                                                                        // Метод нанесения урона
+    protected void getDamage(float damage) { // Метод нанесения урона
         hp -= damage;
         if (hp <= 0) {
             state = State.dead;
@@ -128,17 +133,18 @@ public abstract class BaseHero implements GameInterface { // это абстра
             hp = maxHp;
         }
     }
+
     public int[] getCoords() {
-        return new int[]{position.getX(),position.getY()};
+        return new int[] { position.getX(), position.getY() };
     }
 
-@Override
-    public String toString() {
-        return name +
-                " U+2665: " + Math.round(hp) +
-                " U+1F6E1: " + armor +
-                " U+1F5E1: " + attack +
-                " U+2694: " + Math.round(Math.abs((damage[0] + damage[1])/2)) +
-                " U+1F6B6: " + state;
-    }
+//     @Override
+//     public String toString() {
+//         return name +
+//                 " \u2665: " + Math.round(hp) +
+//                 " \u1F6E1: " + armor +
+//                 " \u1F5E1: " + attack +
+//                 " \u2694: " + Math.round(Math.abs((damage[0] + damage[1]) / 2)) +
+//                 " \u1F6B6: " + state;
+//     }
 }
