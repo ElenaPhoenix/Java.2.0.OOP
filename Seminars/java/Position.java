@@ -1,4 +1,4 @@
-package java.org.example;
+package java;
 
 public class Position {
     private int x, y;

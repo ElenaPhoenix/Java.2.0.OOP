@@ -1,6 +1,6 @@
-package java.org.example;
+package java;
 
-import java.org.example.units.BaseHero;
+import java.units.BaseHero;
 import java.util.Collections;
 
 public class View {

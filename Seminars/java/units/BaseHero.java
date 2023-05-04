@@ -1,10 +1,10 @@
 //  Создать абстрактный класс персонажей
-package java.org.example.units;
+package java.units;
 
 import java.util.ArrayList;
 
-import java.org.example.GameInterface;
-import java.org.example.Position;
+import java.GameInterface;
+import java.Position;
 
 public abstract class BaseHero implements GameInterface { // это абстрактный класс, не может содержать объекты этого
                                                           // класса, противоположность final

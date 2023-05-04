@@ -1,7 +1,7 @@
-package java.org.example;
+package java;
 
 import java.util.ArrayList;
-import java.org.example.units.BaseHero;
+import java.units.BaseHero;
 
 public interface GameInterface {
     void step(ArrayList<BaseHero> arrayFriend, ArrayList<BaseHero> arrayEnemy);

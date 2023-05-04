@@ -1,4 +1,4 @@
-package java.org.example;
+package java;
 
 public enum Names {
     Беркут, Рассеиватель_Мрака, Разящий, Добряк, Сокол, Темный_Лорд, Лис, Ловкач, Хитрюга, Раб;

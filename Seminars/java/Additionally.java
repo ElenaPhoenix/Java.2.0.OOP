@@ -1,9 +1,9 @@
-package java.org.example;
+package java;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import java.org.example.units.*;
+import java.units.*;
 
 public class Additionally {
     public static ArrayList<BaseHero> getList(ArrayList<BaseHero> arrayList, int y1) {

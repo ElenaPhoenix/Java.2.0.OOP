@@ -1,6 +1,6 @@
-package java.org.example;
+package java;
 
-import java.org.example.units.*;
+import java.units.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;

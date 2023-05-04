@@ -1,6 +1,6 @@
-package java.org.example.units;
+package java.units;
 
-import java.org.example.Position;
+import java.Position;
 
 public class Sniper extends Shooters {
     public Sniper(String name, Position position) {
